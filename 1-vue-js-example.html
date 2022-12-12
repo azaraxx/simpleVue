@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Vue.js</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compotible" content="ie=edge" />
+  </head>
+  <body>
+    <div id="app">
+      <h3>{{ title }}</h3>
+      <button>{{ buttonTitle }}</button>
+      <p v-text="paragraph"> </p>
+      <a v-bind:href="link" v-bind:data-id="dataId" target="_blank">External Link</a>
+      <p v-html="details"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+         title: 'Test title',
+         buttonTitle: 'Button click',
+         paragraph: 'Lorem ipsum dolor sit amet',
+         link: 'http://www.google.com',
+         dataId: "1",
+         details: "<b>This is news detail</b>"
+        }
+      });
+    </script>
+  </body>
+</html>
